@@ -19,8 +19,9 @@ matrix:
     env:
     - DB=postgresql
     - CONN_STR='DRIVER={PostgreSQL ANSI};SERVER=localhost;PORT=5432;DATABASE=odbc_test;UID=postgres;'
+    services:
+      - postgresql
     addons:
-      postgresql: "9.2"
       apt:
         packages:
         - unixodbc
