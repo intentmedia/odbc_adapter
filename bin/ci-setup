@@ -8,6 +8,6 @@ mysql)
   ;;
 postgresql)
   sudo odbcinst -i -d -f /usr/share/psqlodbc/odbcinst.ini.template
-  psql -c "CREATE DATABASE odbc_test;" -U postgres
+  psql -c "CREATE DATABASE odbc_test;" -h localhost -U postgres
   ;;
 esac
