@@ -2,7 +2,7 @@
 
 case "$DB" in
 mysql)
-  sudo myodbc-installer -d -a -n "MySQL" -t "DRIVER=/usr/local/lib/libmyodbc8a.so;"
+  sudo myodbc-installer -d -a -n "MySQL" -t "DRIVER=/usr/lib/x86_64-linux-gnu/odbc/libmyodbc8a.so;"
   mysql -e "DROP DATABASE IF EXISTS odbc_test; CREATE DATABASE IF NOT EXISTS odbc_test;" -uroot
   mysql -e "GRANT ALL PRIVILEGES ON *.* TO 'root'@'localhost';" -uroot
   ;;
