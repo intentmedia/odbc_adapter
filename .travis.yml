@@ -1,15 +1,15 @@
 sudo: required
 language: ruby
 cache: bundler
+before_install:
+- wget https://repo.mysql.com/mysql-apt-config_0.8.15-1_all.deb
+- sudo dpkg -i mysql-apt-config_*.deb
 matrix:
   include:
   - rvm: 2.5.1
     env:
     - DB=mysql
     - CONN_STR='DRIVER=MySQL;SERVER=localhost;DATABASE=odbc_test;USER=root;PASSWORD=;'
-    before_install:
-    - wget https://repo.mysql.com/mysql-apt-config_0.8.15-1_all.deb
-    - sudo dpkg -i mysql-apt-config_*.deb
     addons:
       mysql: "5.5"
       apt:
