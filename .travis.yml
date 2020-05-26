@@ -13,7 +13,7 @@ matrix:
         packages:
         - unixodbc
         - unixodbc-dev
-        - libmyodbc
+        - mysql-connector-odbc
         - mysql-client
   - rvm: 2.5.1
     env:
