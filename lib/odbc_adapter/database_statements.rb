@@ -24,7 +24,7 @@ module ODBCAdapter
       log(sql, name) do
         stmt =
           if prepared_statements
-            @connection.do(prepare_statement_sub(sql), *prepared_binds(binds))
+            @connection.run(prepare_statement_sub(sql), *prepared_binds(binds))
           else
             @connection.run(sql)
           end
@@ -133,6 +133,7 @@ module ODBCAdapter
     end
 
     def prepared_binds(binds)
+      # TODO: if _type_cast returns a boolean, must convert back to String
       binds.map(&:value_for_database).map { |bind| _type_cast(bind) }
     end
   end
