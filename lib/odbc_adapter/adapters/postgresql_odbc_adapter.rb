@@ -63,6 +63,14 @@ module ODBCAdapter
         string.gsub(/\\/, '\&\&').gsub(/'/, "''")
       end
 
+      def unquoted_true
+        'true'
+      end
+
+      def unquoted_false
+        'false'
+      end
+
       def disable_referential_integrity
         execute(tables.map { |name| "ALTER TABLE #{quote_table_name(name)} DISABLE TRIGGER ALL" }.join(';'))
         yield
