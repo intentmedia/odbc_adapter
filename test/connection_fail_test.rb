@@ -4,7 +4,8 @@ class ConnectionFailTest < Minitest::Test
   def test_connection_fail
     # We're only interested in testing a MySQL connection failure for now.
     # Postgres disconnects generate a different class of errors
-    skip 'Only executed for MySQL' unless ActiveRecord::Base.connection.instance_values['config'][:conn_str].include? 'MySQL'
+    # skip 'Only executed for MySQL' unless ActiveRecord::Base.connection.instance_values['config'][:conn_str].include? 'MySQL'
+    skip 'This behavior is not currently testable'
     begin
       conn.execute('KILL CONNECTION_ID();')
     rescue => e
