@@ -133,8 +133,13 @@ module ODBCAdapter
     end
 
     def prepared_binds(binds)
-      # TODO: if _type_cast returns a boolean, must convert back to String
-      binds.map(&:value_for_database).map { |bind| _type_cast(bind) }
+      binds.map(&:value_for_database).map { |bind| convert(bind) }
+    end
+
+    def convert(bind)
+      val = _type_cast(bind)
+      val = val.to_s if [true, false].include? val
+      val
     end
   end
 end
