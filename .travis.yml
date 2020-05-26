@@ -13,6 +13,8 @@ jobs:
       env:
         - DB=mysql
         - CONN_STR='DRIVER=MySQL;SERVER=localhost;DATABASE=odbc_test;USER=root;PASSWORD=;'
+      services:
+        - mysql
     - rvm: 2.5.3
       env:
         - DB=postgresql
