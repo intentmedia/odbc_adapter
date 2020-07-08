@@ -189,7 +189,7 @@ module ODBCAdapter
 
       def extract_table_ref_from_insert_sql(sql) # :nodoc:
         sql[/into\s("[A-Za-z0-9_."\[\]\s]+"|[A-Za-z0-9_."\[\]]+)\s*/im]
-        $1.strip if $1
+        Regexp.last_match(1).strip if Regexp.last_match(1)
       end
 
       def serial_sequence(table, column)
