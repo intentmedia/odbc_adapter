@@ -2,6 +2,7 @@
 
 [![Build Status](https://travis-ci.org/localytics/odbc_adapter.svg?branch=master)](https://travis-ci.org/localytics/odbc_adapter)
 [![Gem](https://img.shields.io/gem/v/odbc_adapter.svg)](https://rubygems.org/gems/odbc_adapter)
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fintentmedia%2Fodbc_adapter.svg?type=shield)](https://app.fossa.com/projects/git%2Bgithub.com%2Fintentmedia%2Fodbc_adapter?ref=badge_shield)
 
 An ActiveRecord ODBC adapter. Master branch is working off of Rails 5.0.1. Previous work has been done to make it compatible with Rails 3.2 and 4.2; for those versions use the 3.2.x or 4.2.x gem releases.
 
@@ -77,3 +78,6 @@ Bug reports and pull requests are welcome on GitHub at https://github.com/localy
 ## License
 
 The gem is available as open source under the terms of the [MIT License](http://opensource.org/licenses/MIT).
+
+
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fintentmedia%2Fodbc_adapter.svg?type=large)](https://app.fossa.com/projects/git%2Bgithub.com%2Fintentmedia%2Fodbc_adapter?ref=badge_large)
